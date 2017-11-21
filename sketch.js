@@ -19,6 +19,7 @@ function setup() {
   height = displayHeight;
   width = displayWidth;
   graphic.stroke('rgba(0,255,0, 1)');
+  frame = createGraphics(400,200);
 }
 function drawLine(lineData) {
   graphic.line(lineData.x,lineData.y,lineData.width,lineData.height);
@@ -31,7 +32,9 @@ function draw() {
   fill('#000');
   noStroke();
   rect(0,backgroundY, width, height);
-  
+  frame.image(video);
+  frame.blend;
+  image(frame);
   
 
   var lineData;

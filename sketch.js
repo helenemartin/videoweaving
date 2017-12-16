@@ -64,7 +64,7 @@ function draw() {
 
   }
   
-  layer.blend(graphic, 0, 0, width, height, 0, 0, width, height, NORMAL);
+  layer.blend(graphic, 0, 0, width, height, 0, 0, width, height, DARKEST);
   image(layer, 0, 0);
   // image(graphic, 0, 0);
 

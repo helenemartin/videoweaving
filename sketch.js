@@ -20,8 +20,8 @@ function setup() {
   graphic = createGraphics(1200, 1000);
   height = displayHeight;
   width = displayWidth;
-  graphic.stroke('rgba(0,255,0, 1)');
-  frame = createGraphics(1200,1000);
+  graphic.stroke('rgba(255,255,255, 0.3)');
+  frame = createGraphics(800,600);
 
 }
 function drawLine(lineData) {
@@ -67,11 +67,11 @@ function draw() {
     // line(currentLine.x,currentLine.y,currentLine.width,currentLine.height);
 
   }
-  frame.image(foregroundVideo.get(), 0, 0);
+  frame.image(foregroundVideo, 0, 0);
   // frame.mask(graphic);
-  graphic.blend(frame.get(), 0, 0, width, height, 0, 0, width, height, DARKEST);
+  graphic.blend(frame.get(), 0, 0, width, height, 0, 0, width, height, DIFFERENCE);
   // image(frame, 0, 0);
-  image(foregroundVideo.get(0,0, 100, 100),0,0);
+  image(foregroundVideo,0,0);
   image(backgroundVideo, 10, 10);
   image(graphic, 0, 0);
 

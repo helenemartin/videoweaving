@@ -10,9 +10,9 @@ var backgroundVideo;
 var frame;
 
 function setup() {
-  createCanvas(1200, 1000);
-  backgroundVideo = createVideo(['./assets/11.mp4']);
-  foregroundVideo = createVideo(['./assets/5.mp4']);
+  createCanvas(1800, 1600);
+  backgroundVideo = createVideo(['assets/11.mp4']);
+  foregroundVideo = createVideo(['assets/5.mp4']);
   foregroundVideo.hide(); 
   backgroundVideo.hide();
   foregroundVideo.loop();
@@ -67,11 +67,11 @@ function draw() {
     // line(currentLine.x,currentLine.y,currentLine.width,currentLine.height);
 
   }
-  frame.image(foregroundVideo, 0, 0);
+  frame.image(backgroundVideo, 0, 0);
   // frame.mask(graphic);
   graphic.blend(frame.get(), 0, 0, width, height, 0, 0, width, height, DIFFERENCE);
   // image(frame, 0, 0);
-  image(foregroundVideo,0,0);
+  image(foregroundVideo,20,20);
   image(backgroundVideo, 10, 10);
   image(graphic, 0, 0);
 

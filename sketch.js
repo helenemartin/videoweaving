@@ -11,8 +11,8 @@ var frame;
 
 function setup() {
   createCanvas(1800, 1600);
-  backgroundVideo = createVideo(['assets/11.mp4']);
-  foregroundVideo = createVideo(['assets/5.mp4']);
+  backgroundVideo = createVideo(['/assets/11.mp4']);
+  foregroundVideo = createVideo(['/assets/5.mp4']);
   foregroundVideo.hide(); 
   backgroundVideo.hide();
   foregroundVideo.loop();
